@@ -17,17 +17,14 @@
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" />
 
-    <!-- owl-carousel -->
+    <!-- OWL CAROUSEL -->
     <link rel="stylesheet" href="vendor/owl-carousel/css/owl.carousel.min.css" />
-    <link
-      rel="stylesheet"
-      href="vendor/owl-carousel/css/owl.theme.default.min.css"
-    />
+    <link rel="stylesheet" href="vendor/owl-carousel/css/owl.theme.default.min.css" />
 
     <!-- ANIMATE -->
     <link rel="stylesheet" href="css/animate.css" />
 
-    <!-- DATE-PICKER -->
+    <!-- DATE PICKER -->
     <link rel="stylesheet" href="vendor/date-picker/datepicker.min.css" />
 
     <!-- SLIDER REVOLUTION -->
@@ -39,10 +36,7 @@
     <link rel="stylesheet" href="vendor/hcmobilenav/demo.css" />
 
     <!-- JQUERY TIME PICKER -->
-    <link
-      rel="stylesheet"
-      href="vendor/jquery-timepicker-master/jquery.timepicker.css"
-    />
+    <link rel="stylesheet" href="vendor/jquery-timepicker-master/jquery.timepicker.css" />
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="/favicon.png" />
@@ -50,15 +44,13 @@
     <!-- STYLE CSS -->
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- HERO VIDEO (background inside RevSlider slide) -->
+    <!-- HERO VIDEO -->
     <style>
-      /* Keep slide positioned so the absolute video can fill it */
       #rev_slider_1 li {
         position: relative;
         overflow: hidden;
       }
 
-      /* Video fills the slide like a background image */
       .rev-bg-video {
         position: absolute;
         top: 50%;
@@ -67,17 +59,15 @@
         height: 100%;
         transform: translate(-50%, -50%);
         object-fit: cover;
-        z-index: 0; /* behind captions */
+        z-index: 0;
         pointer-events: none;
       }
 
-      /* Ensure your captions sit above the video */
       #rev_slider_1 .tp-caption {
         position: relative;
         z-index: 5;
       }
 
-      /* Optional: dark overlay to improve text contrast */
       .rev-video-overlay {
         position: absolute;
         inset: 0;
@@ -86,15 +76,7 @@
         pointer-events: none;
       }
 
-      /* Accessibility: respect reduced motion */
       @media (prefers-reduced-motion: reduce) {
-        .rev-bg-video {
-          display: none !important;
-        }
-      }
-
-      /* Performance: on small screens, use the image fallback instead */
-      @media (max-width: 768px) {
         .rev-bg-video {
           display: none !important;
         }
@@ -118,6 +100,7 @@
             <img src="images/logo.png" alt="Mulino" />
           </a>
         </div>
+
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about-us.html">About Us</a></li>
@@ -142,9 +125,11 @@
                 <span></span><span></span><span></span>
               </div>
             </div>
+
             <a href="index.html" class="logo">
               <img src="images/logo.png" alt="Mulino" />
             </a>
+
             <div class="right"></div>
           </div>
         </div>
@@ -165,9 +150,11 @@
         <div class="close-btn">
           <span class="lnr lnr-cross" id="close-icon"></span>
         </div>
+
         <a href="index.html" class="logo">
-          <img src="images/logo-menu-sidebar.png" alt="" />
+          <img src="images/logo-menu-sidebar.png" alt="Mulino sidebar logo" />
         </a>
+
         <p class="text">
           A family built Neapolitan kitchen and chicchetti bar serving clean, hand
           crafted Italian food in the heart of Urmston.
@@ -192,23 +179,27 @@
             <span class="lnr lnr-home"></span>
             <span>1 Primrose Ave, Urmston, Manchester M41 0TY</span>
           </div>
+
           <div class="contact-line">
-            <a href="tel:+0161 286 7819">
+            <a href="tel:+441612867819">
               <span class="lnr lnr-phone-handset"></span>
-              <span> + (0161) 286-7819</span>
+              <span>+44 (0)161 286 7819</span>
             </a>
           </div>
+
           <div class="contact-line">
             <a href="mailto:mulinomanchester@gmail.com">
               <span class="lnr lnr-envelope"></span>
-              <span> mulinomanchester@gmail.com</span>
+              <span>mulinomanchester@gmail.com</span>
             </a>
           </div>
         </div>
 
         <!-- SOCIAL -->
         <div class="social">
-          <a href="https://www.facebook.com/profile.php?id=100063669965514"><i class="zmdi zmdi-facebook-box"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100063669965514" target="_blank" rel="noopener noreferrer">
+            <i class="zmdi zmdi-facebook-box"></i>
+          </a>
         </div>
       </div>
     </header>
@@ -218,12 +209,11 @@
       <div class="rev_slider_wrapper">
         <div id="rev_slider_1" class="rev_slider" data-version="5.4.5">
           <ul>
-            <li data-transition="">
-              <!-- Fallback background image (also used on mobile / reduced motion) -->
-              <img src="images/page-info-bg.jpg" class="rev-slidebg" alt="" />
+            <li data-transition="fade">
+              <!-- FALLBACK BACKGROUND IMAGE -->
+              <img src="images/page-info-bg.jpg" class="rev-slidebg" alt="Mulino background" />
 
-              <!-- ✅ SELF-HOSTED BACKGROUND VIDEO -->
-              <!-- Put your file at: images/mulino.mp4 -->
+              <!-- SELF HOSTED BACKGROUND VIDEO -->
               <video
                 class="rev-bg-video"
                 autoplay
@@ -236,7 +226,7 @@
                 <source src="images/mulino.mp4" type="video/mp4" />
               </video>
 
-              <!-- Optional overlay for readability -->
+              <!-- OPTIONAL OVERLAY -->
               <div class="rev-video-overlay"></div>
 
               <!-- CAPTIONS -->
@@ -245,8 +235,8 @@
                 data-frames='[{"delay":500,"speed":1000,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"y:-20px;opacity:0;","ease":"Power3.easeInOut"}]'
                 data-x="center"
                 data-y="middle"
-                data-fontsize="['72', '70', '65', '60', '60']"
-                data-voffset="['-43.5','-57', '-54', '-97', '-100']"
+                data-fontsize="['72','70','65','60','60']"
+                data-voffset="['-43.5','-57','-54','-97','-100']"
                 data-textAlign="center"
                 data-lineheight="inherit"
                 data-color="#cdaa7c"
@@ -259,8 +249,8 @@
                 data-frames='[{"delay":1000,"speed":1000,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"y:-20px;opacity:0;","ease":"Power3.easeInOut"}]'
                 data-x="center"
                 data-y="middle"
-                data-voffset="['47.5', '34', '37', '-6', '-9']"
-                data-fontsize="['20', '20', '20', '20', '25']"
+                data-voffset="['47.5','34','37','-6','-9']"
+                data-fontsize="['20','20','20','20','25']"
                 data-lineheight="inherit"
                 data-color="#ccc"
               >
@@ -273,11 +263,11 @@
                 data-frames='[{"delay":1500,"speed":1000,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"y:20px;opacity:0;","ease":"Power3.easeInOut"}]'
                 data-x="center"
                 data-y="middle"
-                data-voffset="['146.5', '133', '136', '93', '90']"
-                data-fontsize="['15', '18', '19',  '20', '25']"
+                data-voffset="['146.5','133','136','93','90']"
+                data-fontsize="['15','18','19','20','25']"
                 data-lineheight="inherit"
-                data-width="['172', '182', '190', '200', '252']"
-                data-height="['42', '42', '50', '50', '65']"
+                data-width="['172','182','190','200','252']"
+                data-height="['42','42','50','50','65']"
                 data-paddingtop="1"
                 data-color="#fff"
               >
@@ -288,19 +278,20 @@
         </div>
       </div>
 
-      <!-- WELCOME TO ROYATE -->
+      <!-- WELCOME -->
       <section class="welcome section-primary">
         <div class="container">
           <div class="section-header">
             <h2>WELCOME TO MULINO</h2>
             <span>~ Built on 29 Years of Italian Craft ~</span>
           </div>
+
           <div class="row text-center">
             <div class="col-md-6 col-lg-4">
               <div class="post">
                 <div class="post-thumb">
                   <a href="blog-single.html">
-                    <img src="images/post-thumb-27.jpg" alt="" />
+                    <img src="images/post-thumb-27.jpg" alt="From Napoli to Urmston" />
                   </a>
                 </div>
                 <div class="post-body">
@@ -321,7 +312,7 @@
               <div class="post">
                 <div class="post-thumb">
                   <a href="blog-single-2.html">
-                    <img src="images/post-thumb-3.jpg" alt="" />
+                    <img src="images/post-thumb-3.jpg" alt="Three Generations of Recipes" />
                   </a>
                 </div>
                 <div class="post-body">
@@ -342,7 +333,7 @@
               <div class="post mb-0">
                 <div class="post-thumb">
                   <a href="blog-single-3.html">
-                    <img src="images/post-thumb-2.jpg" alt="" />
+                    <img src="images/post-thumb-2.jpg" alt="A Real Italian Atmosphere" />
                   </a>
                 </div>
                 <div class="post-body pb-0">
@@ -364,290 +355,171 @@
 
       <!-- OUR MENU -->
       <section class="our-menu section-primary pb-113 set-bg" data-image-src="images/menu-block-bg-1.jpg">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="text-white">Vouchers available to buy at Mulino</h2>
-      <span>~ Sample our menu ~</span>
-    </div>
-
-    <div class="row justify-content-between">
-
-      <!-- MAIN COURSE -->
-      <div class="col-md-6">
-        <div class="our-menu-col left">
-          <div class="heading">
-            <h3>Main Course</h3>
-            <span class="icon">
-              <img src="images/main-course.png" alt="" />
-            </span>
-          </div>
-          <div class="body">
-
-            <div class="menu-item">
-              <h5>
-                <a href="#">Spaghetti Pescatora</a>
-                <span class="dots"></span>
-                <span class="price">£17.50</span>
-              </h5>
-              <ul>
-                <li><a href="#">Mixed Seafood</a></li>
-                <li><a href="#">Cherry Tomatoes</a></li>
-                <li><a href="#">Chilli</a></li>
-                <li><a href="#">Garlic</a></li>
-              </ul>
-            </div>
-
-            <div class="menu-item">
-              <h5>
-                <a href="#">Braised Beef Cheeks</a>
-                <span class="dots"></span>
-                <span class="price">£21.95</span>
-              </h5>
-              <ul>
-                <li><a href="#">Mash Potato</a></li>
-                <li><a href="#">Cavolo Nero</a></li>
-                <li><a href="#">Carrots</a></li>
-                <li><a href="#">Beef Jus</a></li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- CICCHETTI / LIGHT -->
-      <div class="col-md-6">
-        <div class="our-menu-col right">
-          <div class="heading">
-            <h3>Cicchetti</h3>
-            <span class="icon mt-12">
-              <img src="images/soups-and-salads.png" alt="" />
-            </span>
-          </div>
-          <div class="body">
-
-            <div class="menu-item">
-              <h5>
-                <a href="#">Burrata Invernale</a>
-                <span class="dots"></span>
-                <span class="price">£10.85</span>
-              </h5>
-              <ul>
-                <li><a href="#">Burrata</a></li>
-                <li><a href="#">Roast Beetroot</a></li>
-                <li><a href="#">Sweet Potato</a></li>
-                <li><a href="#">Pesto Oil</a></li>
-              </ul>
-            </div>
-
-            <div class="menu-item">
-              <h5>
-                <a href="#">Polpette al Sugo</a>
-                <span class="dots"></span>
-                <span class="price">£9.85</span>
-              </h5>
-              <ul>
-                <li><a href="#">Italian Meatballs</a></li>
-                <li><a href="#">Tomato Sauce</a></li>
-                <li><a href="#">Chilli</a></li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- DRINKS -->
-      <div class="col-md-6">
-        <div class="our-menu-col mb-md-0 left">
-          <div class="heading">
-            <h3>Drinks</h3>
-            <span class="icon mt-4px">
-              <img src="images/drinks.png" alt="" />
-            </span>
-          </div>
-          <div class="body">
-
-            <div class="menu-item">
-              <h5>
-                <a href="#">Peroni Nastro Azzurro</a>
-                <span class="dots"></span>
-                <span class="price">£5.50</span>
-              </h5>
-              <ul>
-                <li><a href="#">Italian Lager</a></li>
-                <li><a href="#">Crisp</a></li>
-                <li><a href="#">Refreshing</a></li>
-              </ul>
-            </div>
-
-            <div class="menu-item">
-              <h5>
-                <a href="#">House Red Wine</a>
-                <span class="dots"></span>
-                <span class="price">£6.95</span>
-              </h5>
-              <ul>
-                <li><a href="#">Italian</a></li>
-                <li><a href="#">Medium Bodied</a></li>
-                <li><a href="#">Glass</a></li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- DESSERTS -->
-      <div class="col-md-6">
-        <div class="our-menu-col mb-0 right">
-          <div class="heading">
-            <h3>Desserts</h3>
-            <span class="icon">
-              <img src="images/desserts.png" alt="" />
-            </span>
-          </div>
-          <div class="body">
-
-            <div class="menu-item">
-              <h5>
-                <a href="#">Tiramisu</a>
-                <span class="dots"></span>
-                <span class="price">£6.95</span>
-              </h5>
-              <ul>
-                <li><a href="#">Savoiardi</a></li>
-                <li><a href="#">Coffee</a></li>
-                <li><a href="#">Mascarpone</a></li>
-              </ul>
-            </div>
-
-            <div class="menu-item">
-              <h5>
-                <a href="#">Panna Cotta</a>
-                <span class="dots"></span>
-                <span class="price">£6.50</span>
-              </h5>
-              <ul>
-                <li><a href="#">Vanilla</a></li>
-                <li><a href="#">Fresh Cream</a></li>
-                <li><a href="#">Seasonal Fruit</a></li>
-              </ul>
-            </div>
-            
-
-          </div>
-        </div>
-      </div>
-      
-
-    </div>
-  </div>
-</section>
-
-      <!-- FEATURE -->
-      <section class="section-primary pt-150 pb-120 feature">
         <div class="container">
-          <div class="row">
+          <div class="section-header">
+            <h2 class="text-white">Vouchers available to buy at Mulino</h2>
+            <span>~ Sample our menu ~</span>
+          </div>
+
+          <div class="row justify-content-between">
+            <!-- MAIN COURSE -->
             <div class="col-md-6">
-              <img src="images/feature.jpg" alt="" />
-            </div>
-            <div class="col-md-6">
-              <div class="feature-content">
+              <div class="our-menu-col left">
                 <div class="heading">
-                  <h3><a href="shop-single.html">Feedback From our Customers</a></h3>
-                  
+                  <h3>Main Course</h3>
+                  <span class="icon">
+                    <img src="images/main-course.png" alt="Main course icon" />
+                  </span>
                 </div>
-                <div class="body">
-                  <p>
-                    Wow! Absolutly amazed by this place.
-
-                    We had wanted to visit but never got a chance for 2 years until now and we were blown away.
-
-                    We got there as they opened on Valentines day and they where immediatly extremely friendly welcoming and helpful with the menu.
-
-                    The food was impeccible and the flavours fantastic.
-                    The portions where also VERY generous.
-                    And the price?! In todays money I expected to have been paying around £80 for what we ate, but the price was shocked me at almost half that.
-
-                    For the quality of food I was genuinly taken aback.
-
-                    We can't wait to visit again!
-                  </p>
-                  <span class="author">- Paul Adams</span>
-                  <div class="star-rating">
-                    <i class="zmdi zmdi-star"></i><i class="zmdi zmdi-star"></i
-                    ><i class="zmdi zmdi-star"></i><i class="zmdi zmdi-star"></i
-                    ><i class="zmdi zmdi-star"></i>
-                  </div>
 
                 <div class="body">
-                  <p>
-                    Celebrated my son's 40th birthday. 19 including children. Brilliant helpful waiters, the food was enjoyed by all. Best steak I've had in ages, cut like butter. The size of portions blew us all away. Staff gave out colouring in sheets and pencils which the little ones enjoyed and kept them amused. I think the place is in need of a bit of a tidy up, but in all we are certainly going back. Well worth a visit.
-                  </p>
-                  <span class="author">- Charles Lawrence</span>
-                  <div class="star-rating">
-                    <i class="zmdi zmdi-star"></i><i class="zmdi zmdi-star"></i
-                    ><i class="zmdi zmdi-star"></i><i class="zmdi zmdi-star"></i
-                    ><i class="zmdi zmdi-star"></i>
+                  <div class="menu-item">
+                    <h5>
+                      <a href="#">Spaghetti Pescatora</a>
+                      <span class="dots"></span>
+                      <span class="price">£17.50</span>
+                    </h5>
+                    <ul>
+                      <li><a href="#">Mixed Seafood</a></li>
+                      <li><a href="#">Cherry Tomatoes</a></li>
+                      <li><a href="#">Chilli</a></li>
+                      <li><a href="#">Garlic</a></li>
+                    </ul>
                   </div>
-                
 
-                  <!-- OWL-CAROUSEL 
-                  <div class="feature-slider">
-                    <div class="owl-carousel owl-theme style" id="feature-carousel">
-                      <div class="item">
-                        <div class="feature-small">
-                          <a href="shop-single.html">
-                            <img src="images/feature-small-1.png" alt="" />
-                          </a>
-                          <div class="item-info">
-                            <h6><a href="shop-single.html">Salat banana flower</a></h6>
-                            <span class="price"><span>$</span>40</span>
-                          </div>
-                        </div>
-                      </div>
+                  <div class="menu-item">
+                    <h5>
+                      <a href="#">Braised Beef Cheeks</a>
+                      <span class="dots"></span>
+                      <span class="price">£21.95</span>
+                    </h5>
+                    <ul>
+                      <li><a href="#">Mash Potato</a></li>
+                      <li><a href="#">Cavolo Nero</a></li>
+                      <li><a href="#">Carrots</a></li>
+                      <li><a href="#">Beef Jus</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-                      <div class="item">
-                        <div class="feature-small">
-                          <a href="shop-single.html">
-                            <img src="images/feature-small-2.png" alt="" />
-                          </a>
-                          <div class="item-info">
-                            <h6><a href="shop-single.html">Beef steak with red</a></h6>
-                            <span class="price"><span>$</span>56</span>
-                          </div>
-                        </div>
-                      </div>
+            <!-- CICCHETTI -->
+            <div class="col-md-6">
+              <div class="our-menu-col right">
+                <div class="heading">
+                  <h3>Cicchetti</h3>
+                  <span class="icon mt-12">
+                    <img src="images/soups-and-salads.png" alt="Cicchetti icon" />
+                  </span>
+                </div>
 
-                      <div class="item">
-                        <div class="feature-small">
-                          <a href="shop-single.html">
-                            <img src="images/feature-small-3.png" alt="" />
-                          </a>
-                          <div class="item-info">
-                            <h6><a href="shop-single.html">Classic Linguini Fini</a></h6>
-                            <span class="price"><span>$</span>37</span>
-                          </div>
-                        </div>
-                      </div>
+                <div class="body">
+                  <div class="menu-item">
+                    <h5>
+                      <a href="#">Burrata Invernale</a>
+                      <span class="dots"></span>
+                      <span class="price">£10.85</span>
+                    </h5>
+                    <ul>
+                      <li><a href="#">Burrata</a></li>
+                      <li><a href="#">Roast Beetroot</a></li>
+                      <li><a href="#">Sweet Potato</a></li>
+                      <li><a href="#">Pesto Oil</a></li>
+                    </ul>
+                  </div>
 
-                      <div class="item">
-                        <div class="feature-small">
-                          <a href="shop-single.html">
-                            <img src="images/feature-small-4.png" alt="" />
-                          </a>
-                          <div class="item-info">
-                            <h6><a href="shop-single.html">Salat banana flower</a></h6>
-                            <span class="price"><span>$</span>50</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>-->
+                  <div class="menu-item">
+                    <h5>
+                      <a href="#">Polpette al Sugo</a>
+                      <span class="dots"></span>
+                      <span class="price">£9.85</span>
+                    </h5>
+                    <ul>
+                      <li><a href="#">Italian Meatballs</a></li>
+                      <li><a href="#">Tomato Sauce</a></li>
+                      <li><a href="#">Chilli</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-                    <!-- NAVIGATION BUTTON 
-                    <span class="lnr lnr-chevron-left" id="feature-prev"></span>
-                    <span class="lnr lnr-chevron-right" id="feature-next"></span>-->
+            <!-- DRINKS -->
+            <div class="col-md-6">
+              <div class="our-menu-col mb-md-0 left">
+                <div class="heading">
+                  <h3>Drinks</h3>
+                  <span class="icon mt-4px">
+                    <img src="images/drinks.png" alt="Drinks icon" />
+                  </span>
+                </div>
+
+                <div class="body">
+                  <div class="menu-item">
+                    <h5>
+                      <a href="#">Peroni Nastro Azzurro</a>
+                      <span class="dots"></span>
+                      <span class="price">£5.50</span>
+                    </h5>
+                    <ul>
+                      <li><a href="#">Italian Lager</a></li>
+                      <li><a href="#">Crisp</a></li>
+                      <li><a href="#">Refreshing</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="menu-item">
+                    <h5>
+                      <a href="#">House Red Wine</a>
+                      <span class="dots"></span>
+                      <span class="price">£6.95</span>
+                    </h5>
+                    <ul>
+                      <li><a href="#">Italian</a></li>
+                      <li><a href="#">Medium Bodied</a></li>
+                      <li><a href="#">Glass</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DESSERTS -->
+            <div class="col-md-6">
+              <div class="our-menu-col mb-0 right">
+                <div class="heading">
+                  <h3>Desserts</h3>
+                  <span class="icon">
+                    <img src="images/desserts.png" alt="Desserts icon" />
+                  </span>
+                </div>
+
+                <div class="body">
+                  <div class="menu-item">
+                    <h5>
+                      <a href="#">Tiramisu</a>
+                      <span class="dots"></span>
+                      <span class="price">£6.95</span>
+                    </h5>
+                    <ul>
+                      <li><a href="#">Savoiardi</a></li>
+                      <li><a href="#">Coffee</a></li>
+                      <li><a href="#">Mascarpone</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="menu-item">
+                    <h5>
+                      <a href="#">Panna Cotta</a>
+                      <span class="dots"></span>
+                      <span class="price">£6.50</span>
+                    </h5>
+                    <ul>
+                      <li><a href="#">Vanilla</a></li>
+                      <li><a href="#">Fresh Cream</a></li>
+                      <li><a href="#">Seasonal Fruit</a></li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -656,140 +528,250 @@
         </div>
       </section>
 
-      <!-- BOOK A TABLE -->
-<section class="booking">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-6 px-0">
-        <div class="image-holder"></div>
-      </div>
+      <!-- FEATURE / REVIEWS -->
+      <section class="section-primary pt-150 pb-120 feature">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="images/feature.jpg" alt="Mulino interior or food feature" />
+            </div>
 
-      <div class="col-md-6 px-0">
-        <div class="booking-content">
-          <div class="section-header">
-            <h2 class="text-white">Request a table</h2>
-            <span>~ We will confirm your booking ~</span>
-          </div>
+            <div class="col-md-6">
+              <div class="feature-content">
+                <div class="heading">
+                  <h3><a href="#">Feedback From Our Customers</a></h3>
+                </div>
 
-          <!-- FormSubmit (keeps your theme layout intact) -->
-          <form action="https://formsubmit.co/mulinomanchester@gmail.com" method="POST">
-            <!-- FormSubmit config -->
-            <input type="hidden" name="_subject" value="New Table Booking Request - Mulino" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
-            <!-- Optional redirect after submit (create this file or remove) -->
-            <!-- <input type="hidden" name="_next" value="thank-you.html" /> -->
-
-            <!-- People (theme custom dropdown) -->
-            <input type="hidden" name="people" id="bookingPeopleInput" value="1 people" />
-
-            <div class="form-row fix-lg">
-              <div class="form-col">
-                <div class="select">
-                  <div class="form-holder">
-                    <div class="form-control" id="bookingPeopleDisplay">1 people</div>
-                    <span class="lnr lnr-chevron-down"></span>
+                <div class="body">
+                  <p>
+                    Wow! Absolutely amazed by this place. We had wanted to visit for
+                    two years and were blown away. We got there as they opened on
+                    Valentine’s Day and they were immediately extremely friendly,
+                    welcoming and helpful with the menu. The food was impeccable and
+                    the flavours fantastic. The portions were also very generous. For
+                    the quality of food, I was genuinely taken aback. We cannot wait
+                    to visit again.
+                  </p>
+                  <span class="author">- Paul Adams</span>
+                  <div class="star-rating">
+                    <i class="zmdi zmdi-star"></i>
+                    <i class="zmdi zmdi-star"></i>
+                    <i class="zmdi zmdi-star"></i>
+                    <i class="zmdi zmdi-star"></i>
+                    <i class="zmdi zmdi-star"></i>
                   </div>
-                  <ul class="dropdown">
-                    <li data-value="1 people">1 people</li>
-                    <li data-value="2 people">2 people</li>
-                    <li data-value="3 people">3 people</li>
-                    <li data-value="4 people">4 people</li>
-                    <li data-value="5 people">5 people</li>
-                    <li data-value="6 people">6 people</li>
-                    <li data-value="7 people">7 people</li>
-                    <li data-value="8 people">8 people</li>
-                    <li data-value="9 people">9 people</li>
-                    <li data-value="10 people">10 people</li>
-                  </ul>
                 </div>
-              </div>
 
-              <div class="form-col">
-                <div class="form-holder">
-                  <input
-                    type="text"
-                    name="date"
-                    class="form-control datepicker-here"
-                    data-language="en"
-                    data-date-format="dd - mm - yyyy"
-                    placeholder="Date"
-                    required
-                  />
-                  <span class="lnr lnr-calendar-full big"></span>
+                <div class="body">
+                  <p>
+                    Celebrated my son’s 40th birthday. Nineteen of us including
+                    children. Brilliant helpful waiters, the food was enjoyed by all.
+                    Best steak I’ve had in ages, cut like butter. The size of portions
+                    blew us all away. Staff gave out colouring sheets and pencils
+                    which the little ones enjoyed and kept them amused. We are
+                    certainly going back. Well worth a visit.
+                  </p>
+                  <span class="author">- Charles Lawrence</span>
+                  <div class="star-rating">
+                    <i class="zmdi zmdi-star"></i>
+                    <i class="zmdi zmdi-star"></i>
+                    <i class="zmdi zmdi-star"></i>
+                    <i class="zmdi zmdi-star"></i>
+                    <i class="zmdi zmdi-star"></i>
+                  </div>
                 </div>
+
+                <!--
+                <div class="feature-slider">
+                  <div class="owl-carousel owl-theme style" id="feature-carousel">
+                    <div class="item">
+                      <div class="feature-small">
+                        <a href="shop-single.html">
+                          <img src="images/feature-small-1.png" alt="" />
+                        </a>
+                        <div class="item-info">
+                          <h6><a href="shop-single.html">Salat banana flower</a></h6>
+                          <span class="price"><span>$</span>40</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="feature-small">
+                        <a href="shop-single.html">
+                          <img src="images/feature-small-2.png" alt="" />
+                        </a>
+                        <div class="item-info">
+                          <h6><a href="shop-single.html">Beef steak with red</a></h6>
+                          <span class="price"><span>$</span>56</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="feature-small">
+                        <a href="shop-single.html">
+                          <img src="images/feature-small-3.png" alt="" />
+                        </a>
+                        <div class="item-info">
+                          <h6><a href="shop-single.html">Classic Linguini Fini</a></h6>
+                          <span class="price"><span>$</span>37</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="item">
+                      <div class="feature-small">
+                        <a href="shop-single.html">
+                          <img src="images/feature-small-4.png" alt="" />
+                        </a>
+                        <div class="item-info">
+                          <h6><a href="shop-single.html">Salat banana flower</a></h6>
+                          <span class="price"><span>$</span>50</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <span class="lnr lnr-chevron-left" id="feature-prev"></span>
+                  <span class="lnr lnr-chevron-right" id="feature-next"></span>
+                </div>
+                -->
               </div>
             </div>
-
-            <div class="form-row">
-              <div class="form-col">
-                <div class="form-holder">
-                  <input
-                    type="text"
-                    name="time"
-                    class="form-control time-picker"
-                    placeholder="Time"
-                    required
-                  />
-                  <span class="lnr lnr-clock big"></span>
-                </div>
-              </div>
-
-              <div class="form-col">
-                <div class="form-holder">
-                  <input type="text" name="name" class="form-control" placeholder="Name" required />
-                </div>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-col">
-                <div class="form-holder">
-                  <input type="text" name="phone" class="form-control" placeholder="Phone" required />
-                </div>
-              </div>
-
-              <div class="form-col">
-                <div class="form-holder">
-                  <input type="email" name="email" class="form-control" placeholder="Email" required />
-                </div>
-              </div>
-            </div>
-
-            <div class="btn-holder">
-              <button type="submit" class="au-btn has-bg au-btn--hover round">Book Now</button>
-            </div>
-          </form>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
-<!-- Sync dropdown UI -> hidden input so the selected guest count submits -->
-<script>
-  (function () {
-    var peopleInput = document.getElementById("bookingPeopleInput");
-    var peopleDisplay = document.getElementById("bookingPeopleDisplay");
-    if (!peopleInput || !peopleDisplay) return;
+      <!-- BOOK A TABLE -->
+      <section class="booking">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 px-0">
+              <div class="image-holder"></div>
+            </div>
 
-    // Scope to this booking section only (safer if you have multiple dropdowns on site)
-    var bookingSection = peopleDisplay.closest(".booking");
-    if (!bookingSection) return;
+            <div class="col-md-6 px-0">
+              <div class="booking-content">
+                <div class="section-header">
+                  <h2 class="text-white">Request a table</h2>
+                  <span>~ We will confirm your booking ~</span>
+                </div>
 
-    var items = bookingSection.querySelectorAll(".select .dropdown li");
-    items.forEach(function (li) {
-      li.addEventListener("click", function () {
-        var val = li.getAttribute("data-value") || li.textContent.trim();
-        peopleInput.value = val;
-        peopleDisplay.textContent = val;
-      });
-    });
-  })();
-</script>
+                <form action="https://formsubmit.co/mulinomanchester@gmail.com" method="POST">
+                  <input type="hidden" name="_subject" value="New Table Booking Request - Mulino" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_template" value="table" />
+                  <!-- <input type="hidden" name="_next" value="thank-you.html" /> -->
+
+                  <input type="hidden" name="people" id="bookingPeopleInput" value="1 people" />
+
+                  <div class="form-row fix-lg">
+                    <div class="form-col">
+                      <div class="select">
+                        <div class="form-holder">
+                          <div class="form-control" id="bookingPeopleDisplay">1 people</div>
+                          <span class="lnr lnr-chevron-down"></span>
+                        </div>
+                        <ul class="dropdown">
+                          <li data-value="1 people">1 people</li>
+                          <li data-value="2 people">2 people</li>
+                          <li data-value="3 people">3 people</li>
+                          <li data-value="4 people">4 people</li>
+                          <li data-value="5 people">5 people</li>
+                          <li data-value="6 people">6 people</li>
+                          <li data-value="7 people">7 people</li>
+                          <li data-value="8 people">8 people</li>
+                          <li data-value="9 people">9 people</li>
+                          <li data-value="10 people">10 people</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="form-col">
+                      <div class="form-holder">
+                        <input
+                          type="text"
+                          name="date"
+                          class="form-control datepicker-here"
+                          data-language="en"
+                          data-date-format="dd - mm - yyyy"
+                          placeholder="Date"
+                          required
+                        />
+                        <span class="lnr lnr-calendar-full big"></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-col">
+                      <div class="form-holder">
+                        <input
+                          type="text"
+                          name="time"
+                          class="form-control time-picker"
+                          placeholder="Time"
+                          required
+                        />
+                        <span class="lnr lnr-clock big"></span>
+                      </div>
+                    </div>
+
+                    <div class="form-col">
+                      <div class="form-holder">
+                        <input
+                          type="text"
+                          name="name"
+                          class="form-control"
+                          placeholder="Name"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-col">
+                      <div class="form-holder">
+                        <input
+                          type="text"
+                          name="phone"
+                          class="form-control"
+                          placeholder="Phone"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-col">
+                      <div class="form-holder">
+                        <input
+                          type="email"
+                          name="email"
+                          class="form-control"
+                          placeholder="Email"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="btn-holder">
+                    <button type="submit" class="au-btn has-bg au-btn--hover round">
+                      Request Now
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- LATEST NEWS -->
-      <!--<section class="section-primary pb-120">
+      <!--
+      <section class="section-primary pb-120">
         <div class="container">
           <div class="section-header">
             <h2>Latest news</h2>
@@ -870,81 +852,87 @@
             </div>
           </div>
         </div>
-      </section>-->
+      </section>
+      -->
     </main>
 
     <footer>
-			<!-- FOOTER TOP -->
-			<div class="ft-top">
-				<div class="container">
-					<div class="ft-top-wrapper">
-						<div class="ft-logo">
-							<a href="index.html">
-								<img src="images/logo.png" alt="">
-							</a>
-						</div>
-						<div class="row justify-content-between justify-content-xl-start">
-							<div class="col-md-3  ft-col">
-								<h6>About Us</h6>
-								<p>Family built. Italian at heart. Serving Manchester for 29 years with clean ingredients, Neapolitan craft and genuine hospitality.</p>
-							</div>
-							<div class="col-md-5  col-xl-4 offset-xl-1 ft-col">
-								<h6>Get news & offers</h6>
-								<form method="get">
-									<div class="form-inner">
-										<input type="text" placeholder="Enter your mail">
-										<button>
-											<span class="lnr lnr-envelope"></span>
-										</button>
-									</div>
-								</form>
-								<div class="social">
-									<a href="https://www.facebook.com/profile.php?id=100063669965514">
-										<i class="zmdi zmdi-facebook-box"></i>
-									</a>
-									<!---<a href="#">
-										<i class="zmdi zmdi-linkedin"></i>
-									</a>-->
-									<a href="https://www.instagram.com/mulino_restaurant/">
-										<i class="zmdi zmdi-instagram"></i>
-									</a>  
-								</div>
-							</div>
-							<div class="col-md-3 col-xl-2  ml-xl-auto ft-col">
-								<h6>Contact Us</h6>
-								<p>1 Primrose Ave, Urmston, Manchester M41 0TY</p>
-								<p>0161 286 7819</p>
-								<p>mulinomanchester@gmail.com</p>
-							</div>
-						</div>	
-					</div>
-				</div>
-			</div>
-			<div class="ft-bot">
-				<div class="container">
-					<a href="xorify.com">
-					Website created by Xorify
-					</a>		
-				</div>
-			</div>
-		</footer>
+      <!-- FOOTER TOP -->
+      <div class="ft-top">
+        <div class="container">
+          <div class="ft-top-wrapper">
+            <div class="ft-logo">
+              <a href="index.html">
+                <img src="images/logo.png" alt="Mulino logo" />
+              </a>
+            </div>
+
+            <div class="row justify-content-between justify-content-xl-start">
+              <div class="col-md-3 ft-col">
+                <h6>About Us</h6>
+                <p>
+                  Family built. Italian at heart. Serving Manchester for 29 years
+                  with clean ingredients, Neapolitan craft and genuine hospitality.
+                </p>
+              </div>
+
+              <div class="col-md-5 col-xl-4 offset-xl-1 ft-col">
+                <h6>Get news &amp; offers</h6>
+                <form method="get">
+                  <div class="form-inner">
+                    <input type="text" placeholder="Enter your mail" />
+                    <button type="submit">
+                      <span class="lnr lnr-envelope"></span>
+                    </button>
+                  </div>
+                </form>
+
+                <div class="social">
+                  <a href="https://www.facebook.com/profile.php?id=100063669965514" target="_blank" rel="noopener noreferrer">
+                    <i class="zmdi zmdi-facebook-box"></i>
+                  </a>
+                  <a href="https://www.instagram.com/mulino_restaurant/" target="_blank" rel="noopener noreferrer">
+                    <i class="zmdi zmdi-instagram"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-xl-2 ml-xl-auto ft-col">
+                <h6>Contact Us</h6>
+                <p>1 Primrose Ave, Urmston, Manchester M41 0TY</p>
+                <p>0161 286 7819</p>
+                <p>mulinomanchester@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ft-bot">
+        <div class="container">
+          <a href="https://xorify.com" target="_blank" rel="noopener noreferrer">
+            Website created by Xorify
+          </a>
+        </div>
+      </div>
+    </footer>
 
     <!-- CLICK TO TOP -->
     <div class="click-to-top">
       <span class="lnr lnr-arrow-up"></span>
     </div>
 
-    <!-- jQUERY -->
+    <!-- JQUERY -->
     <script src="js/jquery-3.3.1.min.js"></script>
 
     <!-- BOOTSTRAP JS -->
     <script src="vendor/bootstrap/bootstrap.min.js"></script>
 
-    <!-- Slider Revolution core JavaScript files -->
+    <!-- SLIDER REVOLUTION -->
     <script src="vendor/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
     <script src="vendor/revolution-slider/js/jquery.themepunch.tools.min.js"></script>
 
-    <!-- Slider Revolution extension scripts. ONLY NEEDED FOR LOCAL TESTING -->
+    <!-- SLIDER REVOLUTION EXTENSIONS -->
     <script src="vendor/revolution-slider/js/revolution.extension.actions.min.js"></script>
     <script src="vendor/revolution-slider/js/revolution.extension.carousel.min.js"></script>
     <script src="vendor/revolution-slider/js/revolution.extension.kenburn.min.js"></script>
@@ -964,14 +952,37 @@
     <!-- SIDENAV MOBILE -->
     <script src="vendor/hcmobilenav/hc-mobile-nav.js"></script>
 
-    <!-- DATE-PICKER -->
+    <!-- DATE PICKER -->
     <script src="vendor/date-picker/datepicker.js"></script>
     <script src="vendor/date-picker/datepicker.en.js"></script>
 
-    <!-- JQUERY TIMEPICKER -->
+    <!-- JQUERY TIME PICKER -->
     <script src="vendor/jquery-timepicker-master/jquery.timepicker.min.js"></script>
 
     <!-- MAIN JS -->
     <script src="js/main.min.js"></script>
+
+    <!-- BOOKING PEOPLE DROPDOWN SYNC -->
+    <script>
+      (function () {
+        var peopleInput = document.getElementById("bookingPeopleInput");
+        var peopleDisplay = document.getElementById("bookingPeopleDisplay");
+
+        if (!peopleInput || !peopleDisplay) return;
+
+        var bookingSection = peopleDisplay.closest(".booking");
+        if (!bookingSection) return;
+
+        var items = bookingSection.querySelectorAll(".select .dropdown li");
+
+        items.forEach(function (li) {
+          li.addEventListener("click", function () {
+            var val = li.getAttribute("data-value") || li.textContent.trim();
+            peopleInput.value = val;
+            peopleDisplay.textContent = val;
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
