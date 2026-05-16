@@ -643,7 +643,7 @@
         </div>
       </section>
 
-      <!-- BOOK A TABLE -->
+      <!-- BOOKING REQUEST FORM -->
       <section class="booking">
         <div class="container-fluid">
           <div class="row">
@@ -655,26 +655,76 @@
               <div class="booking-content">
                 <div class="section-header">
                   <h2 class="text-white">Request a table</h2>
-                  <span>~ We will confirm your booking ~</span>
+                  <span>~ Your booking is not confirmed until we contact you ~</span>
                 </div>
 
-                <form action="https://formsubmit.co/mulinomanchester@gmail.com" method="POST">
-                  <input type="hidden" name="_subject" value="New Table Booking Request - Mulino" />
-                  <input type="hidden" name="_captcha" value="false" />
-                  <input type="hidden" name="_template" value="table" />
-                  <!-- <input type="hidden" name="_next" value="thank-you.html" /> -->
+                <div class="booking-request-notice">
+                  <strong>This form sends a booking request only.</strong>
+                  <p>
+                    Your table is not reserved when you submit this form. A member of the Mulino
+                    team must contact you by phone or email to confirm availability before your
+                    booking is final.
+                  </p>
+                </div>
 
-                  <input type="hidden" name="people" id="bookingPeopleInput" value="1 people" />
+                <form action="https://api.web3forms.com/submit" method="POST">
+                  <!-- WEB3FORMS CONFIG -->
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="aae98614-5535-440b-b8dd-ee1a9da1527b"
+                  />
+
+                  <input
+                    type="hidden"
+                    name="subject"
+                    value="New Table Booking Request - Mulino Manchester"
+                  />
+
+                  <input
+                    type="hidden"
+                    name="from_name"
+                    value="Mulino Manchester Website"
+                  />
+
+                  <input
+                    type="hidden"
+                    name="redirect"
+                    value="https://www.mulinomanchester.co.uk/thank-you.html"
+                  />
+
+                  <input
+                    type="hidden"
+                    name="Important booking notice"
+                    value="This is a booking request only. The table is not reserved until Mulino Manchester confirms availability with the customer."
+                  />
+
+                  <!-- SPAM PROTECTION -->
+                  <input
+                    type="checkbox"
+                    name="botcheck"
+                    style="display: none;"
+                    tabindex="-1"
+                    autocomplete="off"
+                  />
+
+                  <input
+                    type="hidden"
+                    name="Number of people"
+                    id="bookingPeopleInput"
+                    value="1 person"
+                  />
 
                   <div class="form-row fix-lg">
                     <div class="form-col">
                       <div class="select">
                         <div class="form-holder">
-                          <div class="form-control" id="bookingPeopleDisplay">1 people</div>
+                          <div class="form-control" id="bookingPeopleDisplay">1 person</div>
                           <span class="lnr lnr-chevron-down"></span>
                         </div>
+
                         <ul class="dropdown">
-                          <li data-value="1 people">1 people</li>
+                          <li data-value="1 person">1 person</li>
                           <li data-value="2 people">2 people</li>
                           <li data-value="3 people">3 people</li>
                           <li data-value="4 people">4 people</li>
@@ -692,11 +742,11 @@
                       <div class="form-holder">
                         <input
                           type="text"
-                          name="date"
+                          name="Requested date"
                           class="form-control datepicker-here"
                           data-language="en"
                           data-date-format="dd - mm - yyyy"
-                          placeholder="Date"
+                          placeholder="Requested date"
                           required
                         />
                         <span class="lnr lnr-calendar-full big"></span>
@@ -709,9 +759,9 @@
                       <div class="form-holder">
                         <input
                           type="text"
-                          name="time"
+                          name="Requested time"
                           class="form-control time-picker"
-                          placeholder="Time"
+                          placeholder="Requested time"
                           required
                         />
                         <span class="lnr lnr-clock big"></span>
@@ -722,9 +772,10 @@
                       <div class="form-holder">
                         <input
                           type="text"
-                          name="name"
+                          name="Customer name"
                           class="form-control"
-                          placeholder="Name"
+                          placeholder="Full name"
+                          autocomplete="name"
                           required
                         />
                       </div>
@@ -735,10 +786,11 @@
                     <div class="form-col">
                       <div class="form-holder">
                         <input
-                          type="text"
-                          name="phone"
+                          type="tel"
+                          name="Customer phone"
                           class="form-control"
-                          placeholder="Phone"
+                          placeholder="Phone number"
+                          autocomplete="tel"
                           required
                         />
                       </div>
@@ -748,18 +800,25 @@
                       <div class="form-holder">
                         <input
                           type="email"
-                          name="email"
+                          name="Customer email"
                           class="form-control"
-                          placeholder="Email"
+                          placeholder="Email address"
+                          autocomplete="email"
                           required
                         />
                       </div>
                     </div>
                   </div>
 
+                  <p class="booking-form-note">
+                    By submitting this form, you are requesting a table at Mulino Manchester. This
+                    does not guarantee availability. Please wait for confirmation from the restaurant
+                    before attending.
+                  </p>
+
                   <div class="btn-holder">
                     <button type="submit" class="au-btn has-bg au-btn--hover round">
-                      Request Now
+                      Send Request
                     </button>
                   </div>
                 </form>
@@ -768,92 +827,6 @@
           </div>
         </div>
       </section>
-
-      <!-- LATEST NEWS -->
-      <!--
-      <section class="section-primary pb-120">
-        <div class="container">
-          <div class="section-header">
-            <h2>Latest news</h2>
-            <span>~ Great articles ~</span>
-          </div>
-
-          <div class="row">
-            <div class="col-md-6 col-lg-4">
-              <div class="post">
-                <div class="post-thumb">
-                  <a href="blog-single.html">
-                    <img src="images/post-thumb-4.jpg" alt="" />
-                  </a>
-                  <div class="post-date">
-                    <div class="inner">
-                      <span class="date">20</span>
-                      <span class="month">June</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="post-body has-border bg-1">
-                  <h5><a href="blog-single.html">On the other hand</a></h5>
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                    blanditiis praesentium voluptatum deleniti atque.
-                  </p>
-                  <a href="blog-single.html" class="au-btn__readmore">Read More</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <div class="post">
-                <div class="post-thumb">
-                  <a href="blog-single.html">
-                    <img src="images/post-thumb-5.jpg" alt="" />
-                  </a>
-                  <div class="post-date">
-                    <div class="inner">
-                      <span class="date">16</span>
-                      <span class="month">June</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="post-body has-border bg-2">
-                  <h5><a href="blog-single.html">Contrary to popular</a></h5>
-                  <p>
-                    Nam libero tempore, cum soluta nobis est eligendi optio cumque
-                    nihil impedit quo minus id quod maxime placeat.
-                  </p>
-                  <a href="blog-single.html" class="au-btn__readmore">Read More</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-              <div class="post mb-0">
-                <div class="post-thumb">
-                  <a href="blog-single.html">
-                    <img src="images/post-thumb-6.jpg" alt="" />
-                  </a>
-                  <div class="post-date">
-                    <div class="inner">
-                      <span class="date">10</span>
-                      <span class="month">June</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="post-body has-border bg-3">
-                  <h5><a href="blog-single.html">This book is a treatise</a></h5>
-                  <p>
-                    Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-                    suscipit laboriosam, nisi ut aliquid ex ea.
-                  </p>
-                  <a href="blog-single.html" class="au-btn__readmore">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      -->
     </main>
 
     <footer>
@@ -871,8 +844,8 @@
               <div class="col-md-3 ft-col">
                 <h6>About Us</h6>
                 <p>
-                  Family built. Italian at heart. Serving Manchester for 29 years
-                  with clean ingredients, Neapolitan craft and genuine hospitality.
+                  Family built. Italian at heart. Serving Manchester for 29 years with clean
+                  ingredients, Neapolitan craft and genuine hospitality.
                 </p>
               </div>
 
@@ -880,7 +853,7 @@
                 <h6>Get news &amp; offers</h6>
                 <form method="get">
                   <div class="form-inner">
-                    <input type="text" placeholder="Enter your mail" />
+                    <input type="email" placeholder="Enter your email" />
                     <button type="submit">
                       <span class="lnr lnr-envelope"></span>
                     </button>
@@ -888,10 +861,19 @@
                 </form>
 
                 <div class="social">
-                  <a href="https://www.facebook.com/profile.php?id=100063669965514" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100063669965514"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <i class="zmdi zmdi-facebook-box"></i>
                   </a>
-                  <a href="https://www.instagram.com/mulino_restaurant/" target="_blank" rel="noopener noreferrer">
+
+                  <a
+                    href="https://www.instagram.com/mulino_restaurant/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <i class="zmdi zmdi-instagram"></i>
                   </a>
                 </div>
@@ -975,11 +957,12 @@
 
         var items = bookingSection.querySelectorAll(".select .dropdown li");
 
-        items.forEach(function (li) {
-          li.addEventListener("click", function () {
-            var val = li.getAttribute("data-value") || li.textContent.trim();
-            peopleInput.value = val;
-            peopleDisplay.textContent = val;
+        items.forEach(function (item) {
+          item.addEventListener("click", function () {
+            var selectedValue = item.getAttribute("data-value") || item.textContent.trim();
+
+            peopleInput.value = selectedValue;
+            peopleDisplay.textContent = selectedValue;
           });
         });
       })();
