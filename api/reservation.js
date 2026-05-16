@@ -31,7 +31,7 @@ module.exports = async function handler(req, res) {
     const safeEmail = escapeHtml(email);
 
     await resend.emails.send({
-      from: "Mulino Website <onboarding@resend.dev>",
+      from: "Mulino Website <bookings@mulinomanchester.co.uk>",
       to: ["mulinomanchester@gmail.com"],
       reply_to: safeEmail,
       subject: "New Table Booking Request - Mulino Manchester",

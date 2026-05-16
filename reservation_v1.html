@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Reservation | Mulino Manchester</title>
+    <title>Reservation Request | Mulino Manchester</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- LINEARICONS -->
@@ -46,6 +46,39 @@
 
     <!-- STYLE CSS -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      .reservation-notice {
+        max-width: 760px;
+        margin: 0 auto 35px auto;
+        padding: 18px 24px;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        background: #fffaf3;
+        text-align: center;
+        line-height: 1.7;
+      }
+
+      .reservation-notice strong {
+        display: block;
+        margin-bottom: 6px;
+        color: #222;
+        font-size: 16px;
+      }
+
+      .reservation-notice p {
+        margin: 0;
+        color: #555;
+      }
+
+      .form-note {
+        max-width: 720px;
+        margin: 25px auto 0 auto;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.7;
+        color: #666;
+      }
+    </style>
   </head>
 
   <body class="preload">
@@ -178,20 +211,69 @@
       <!-- PAGE INFO -->
       <section class="page-info set-bg" data-image-src="images/page-info-bg.jpg">
         <div class="section-header">
-          <h1 class="text-white">Reservation</h1>
-          <span>~ For the best location ~</span>
+          <h1 class="text-white">Reservation Request</h1>
+          <span>~ Request a table at Mulino Manchester ~</span>
         </div>
       </section>
 
-      <!-- RESERVATION FORM -->
+      <!-- RESERVATION REQUEST FORM -->
       <section class="section-primary section-form pb-120">
         <div class="container">
           <div class="section-header">
             <h2>Request a table</h2>
-            <span>~ We will confirm your booking ~</span>
+            <span>~ Your table is not reserved until we confirm your booking ~</span>
           </div>
 
-          <form action="/api/reservation" method="POST">
+          <div class="reservation-notice">
+            <strong>This form sends a booking request only.</strong>
+            <p>
+              Your table is not reserved when you submit this form. A member of the Mulino team must
+              contact you by phone or email to confirm availability before your booking is final.
+            </p>
+          </div>
+
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <!-- WEB3FORMS CONFIG -->
+            <input
+              type="hidden"
+              name="access_key"
+              value="aae98614-5535-440b-b8dd-ee1a9da1527b"
+            />
+
+            <input
+              type="hidden"
+              name="subject"
+              value="New Table Booking Request - Mulino Manchester"
+            />
+
+            <input
+              type="hidden"
+              name="from_name"
+              value="Mulino Manchester Website"
+            />
+
+            <input
+              type="hidden"
+              name="redirect"
+              value="https://www.mulinomanchester.co.uk/thank-you.html"
+            />
+
+            <!-- CLEAR INTERNAL MESSAGE FOR EMAIL -->
+            <input
+              type="hidden"
+              name="Important booking notice"
+              value="This is a booking request only. The table is not reserved until Mulino Manchester confirms availability with the customer."
+            />
+
+            <!-- SPAM PROTECTION -->
+            <input
+              type="checkbox"
+              name="botcheck"
+              style="display: none;"
+              tabindex="-1"
+              autocomplete="off"
+            />
+
             <div class="form-inner">
               <!-- PEOPLE -->
               <div class="form-col">
@@ -215,7 +297,7 @@
                   </ul>
                 </div>
 
-                <input type="hidden" name="people" id="peopleInput" value="1 person" />
+                <input type="hidden" name="Number of people" id="peopleInput" value="1 person" />
               </div>
 
               <!-- DATE -->
@@ -223,11 +305,11 @@
                 <div class="form-holder">
                   <input
                     type="text"
-                    name="date"
+                    name="Requested date"
                     class="form-control datepicker-here style"
                     data-language="en"
                     data-date-format="dd - mm - yyyy"
-                    placeholder="Date"
+                    placeholder="Requested date"
                     required
                   />
                   <span class="lnr lnr-calendar-full big primary-color"></span>
@@ -239,9 +321,9 @@
                 <div class="form-holder">
                   <input
                     type="text"
-                    name="time"
+                    name="Requested time"
                     class="form-control time-picker style"
-                    placeholder="Time"
+                    placeholder="Requested time"
                     required
                   />
                   <span class="lnr lnr-clock big primary-color"></span>
@@ -253,9 +335,9 @@
                 <div class="form-holder">
                   <input
                     type="text"
-                    name="name"
+                    name="Customer name"
                     class="form-control style"
-                    placeholder="Name"
+                    placeholder="Full name"
                     autocomplete="name"
                     required
                   />
@@ -267,9 +349,9 @@
                 <div class="form-holder">
                   <input
                     type="tel"
-                    name="phone"
+                    name="Customer phone"
                     class="form-control style"
-                    placeholder="Phone"
+                    placeholder="Phone number"
                     autocomplete="tel"
                     required
                   />
@@ -281,9 +363,9 @@
                 <div class="form-holder">
                   <input
                     type="email"
-                    name="email"
+                    name="Customer email"
                     class="form-control style"
-                    placeholder="Email"
+                    placeholder="Email address"
                     autocomplete="email"
                     required
                   />
@@ -291,9 +373,15 @@
               </div>
             </div>
 
+            <div class="form-note">
+              By submitting this form, you are requesting a table at Mulino Manchester. This does
+              not guarantee availability. Please wait for confirmation from the restaurant before
+              attending.
+            </div>
+
             <div class="btn-holder">
               <button type="submit" class="au-btn round au-btn--hover has-bg">
-                Request now
+                Send request
               </button>
             </div>
           </form>
@@ -422,7 +510,7 @@
     <!-- MAIN JS -->
     <script src="js/main.min.js"></script>
 
-    <!-- SYNC PEOPLE DROPDOWN TO HIDDEN FORM FIELD -->
+    <!-- SYNC PEOPLE DROPDOWN TO HIDDEN WEB3FORMS FIELD -->
     <script>
       (function () {
         var peopleInput = document.getElementById("peopleInput");
